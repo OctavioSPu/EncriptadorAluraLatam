@@ -62,7 +62,39 @@ function encriptarPalabra(){
     
 function desencriptarPalabra(){
 
-    if(banderaEncriptado==0)
+
+    palabra = document.getElementById('textoUsuario').value;
+    banderaError=0;
+    
+ 
+    // Verificamos si las letras son solo minusculas, de acuerdo al codigo ASCII rango "a = 97 - z = 122 - espacio =32 - salto linea= 10"
+
+
+    for(i = 0; i < palabra.length; i++){
+        
+
+        letraActual = palabra.charAt(i);
+
+        letraAscii = letraActual.charCodeAt(0);
+        //console.log(letraAscii);
+
+        if((letraAscii >96 && letraAscii <123 && banderaError == 0) || letraAscii==32 || letraAscii==10)
+        {
+            //console.log(`la letra ${letraActual} es minucula`);
+            // document.getElementById('textoencriptado').innerHTML = palabra;
+
+        }
+        else{
+            //console.log("error caracter invalido");
+            banderaError=1;
+            document.getElementById('textoencriptado').innerHTML = "Error, el texto a encriptar contiene caracteres no permitidos (mayusculas , signos etc. ) "
+        }
+
+        
+     
+    }
+
+    if(banderaEncriptado==0 && banderaError==0)
     {
         palabra = document.getElementById('textoUsuario').value;
         NuevaPalabra=palabra.replaceAll('enter', 'e');
@@ -73,6 +105,11 @@ function desencriptarPalabra(){
     
         document.getElementById('textoencriptado').innerHTML = NuevaPalabra5;
     }
+    else{
+        //console.log("error caracter invalido");
+        banderaError=1;
+        document.getElementById('textoencriptado').innerHTML = "Error, el texto a desencriptar contiene caracteres no permitidos (mayusculas , signos etc. ) "
+    }d
 
 
 }
