@@ -1,0 +1,82 @@
+
+
+
+
+.titulo-principal{
+   background-color: yellow;
+   color:black;
+   text-align: center;
+   font-size: 40px;
+   margin:10px;
+}
+
+.reglas{
+    background-color: red;
+    text-align: center;
+    font-weight:bold;
+    font-size: 2em ;
+}
+
+
+.entrada_texto , .salida_texto{
+    resize:none;
+    border-style:groove;
+    border-color:black;
+    border-width: 20px;
+    font-size:20px;
+    outline: none;
+    
+}
+
+
+
+.Desencriptador{
+    margin: 0px 60px;
+}
+
+
+
+.botonEncriptar , .botonDesencriptar , .botonCopiar , .botonBorrar{
+    margin: 20px; 
+    width: 18%;
+    padding: 10px 0;
+    font-size: 18px ;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 1s ;
+    cursor:pointer;
+}
+
+#Encriptar , #Desencriptar {
+    color:red;
+    font-size: 30px;
+    padding: 10px 2em;
+    margin: 0 0 0 1em;
+}
+
+#Copiar {
+    color:red;
+    font-size: 30px;
+    padding: 10px 2em;
+    margin: 0 0 0 12em;
+}
+
+@media screen and (max-width:480px){
+
+    .titulo-principal{
+        color:red;
+        text-align:center;
+        font-size: 40px;
+        margin:10px;
+     }
+
+    .botonEncriptar , .botonDesencriptar , .botonCopiar , .botonBorrar{
+        margin: 10px; 
+        width: auto;
+        font-size: 30px ;
+        font-weight: bold;
+
+
+    }
+
+}
