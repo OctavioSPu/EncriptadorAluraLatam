@@ -52,7 +52,7 @@ function encriptarPalabra(){
         document.getElementById('textoencriptado').innerHTML = NuevaPalabra5;
         console.log(palabra);
         console.log(NuevaPalabra5);
-        banderaEncriptado=1;
+        
     }
 
 
@@ -94,12 +94,12 @@ function desencriptarPalabra(){
      
     }
 
-    if(banderaEncriptado==0 && banderaError==0)
+    if( banderaError==0)
     {
         palabra = document.getElementById('textoUsuario').value;
-        NuevaPalabra=palabra.replaceAll('enter', 'e');
-        NuevaPalabra2=NuevaPalabra.replaceAll('imes', 'i');
-        NuevaPalabra3=NuevaPalabra2.replaceAll('ai', 'a');
+        NuevaPalabra=palabra.replaceAll('enter', 'e'); 
+        NuevaPalabra2=NuevaPalabra.replaceAll('ai', 'a');
+        NuevaPalabra3=NuevaPalabra2.replaceAll('imes', 'i');
         NuevaPalabra4=NuevaPalabra3.replaceAll('ober', 'o');
         NuevaPalabra5=NuevaPalabra4.replaceAll('ufat', 'u');
     
@@ -109,7 +109,7 @@ function desencriptarPalabra(){
         //console.log("error caracter invalido");
         banderaError=1;
         document.getElementById('textoencriptado').innerHTML = "Error, el texto a desencriptar contiene caracteres no permitidos (mayusculas , signos etc. ) "
-    }d
+    }
 
 
 }
